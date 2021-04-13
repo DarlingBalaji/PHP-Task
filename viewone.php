@@ -11,6 +11,7 @@ $result = $conn->query($sql);
 // if ($result->num_rows > 0) {
 
     while ($rows = $result->fetch_assoc() ) {
+        $fieldname = $rows['Cdate'];
         $field1name = $rows['Cname'];
         $field2name = $rows['Cpackage'];
         $field3name = $rows['Cclasstype'];
@@ -23,6 +24,7 @@ $result = $conn->query($sql);
         echo $field4name.'<br />';
         echo $field5name.'<br />';
         echo $field6name;
+        echo date('d-m-y', strtotime($fieldname));
     }
 
 $conn-> close();
