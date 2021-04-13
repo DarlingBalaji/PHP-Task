@@ -32,4 +32,7 @@ $conn-> close();
 // 	echo "No records found";	
 // }
 
+$id = isset($_GET["name"]) ? $_GET["name"] : false;
+echo ($id);
+
 ?>

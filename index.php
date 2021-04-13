@@ -106,11 +106,12 @@
 						    <tbody>
 							<?php 
 								include 'dbconfig.php';
+								session_start();
 								$sql = "SELECT * FROM user";
 								$result = $conn->query($sql);
 								if ($result->num_rows > 0) {
-								// output data of each row
 								while($row = $result->fetch_assoc()) {
+
 								    echo '<tr>
 								              <td scope="row">' . $row["Cdate"]. '</td>
 								              <td scope="row">' . $row["Cname"]. '</td>
@@ -119,8 +120,14 @@
 								              <td> '.$row["Cexercise"] .'</td>
 								              <td> '.$row["Cclasstype"] .'</td>
 								              <td> '.$row["Cattandance"] .'</td>
-								              <td> <a class="View_Btn btn" onclick="window.location.href=viewone.html;">View</a></td>
-								              <td> <button class="Delete_Btn btn">Delete</button></td>
+								              <td> 
+								              		<a href="viewone.php?name=balaji" class="View_Btn btn">View</a>
+								              </td>
+								              <td> 
+								              	<form action="delete.php" method="POST">
+								              		<button class="Delete_Btn btn">Delete</button>
+								              	</form>
+							              		</td>
 								            </tr>';
 								}
 								} else {

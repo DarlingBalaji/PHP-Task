@@ -10,9 +10,9 @@ $Cclasstype = $_POST['Cclasstype'];
 $Ctopics = $_POST['Ctopics'];
 $Cexercise = $_POST['Cexercise'];
 $Cattandance = $_POST['Cattandance'];
-$cdate = $_POST['Cdate'];
+$old_date = $_POST['Cdate'];
 // echo ();
-$Cdate = date('d-m-y', strtotime($cdate));
+$Cdate = date('d-m-y', strtotime($old_date));
 
 echo($Cname);
 echo($Cpackage);
