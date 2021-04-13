@@ -10,6 +10,7 @@ $Cclasstype = $_POST['Cclasstype'];
 $Ctopics = $_POST['Ctopics'];
 $Cexercise = $_POST['Cexercise'];
 $Cattandance = $_POST['Cattandance'];
+$Cdate = $_POST['Cdate'];
 
 echo($Cname);
 echo($Cpackage);
@@ -17,12 +18,13 @@ echo($Cclasstype);
 echo($Ctopics);
 echo($Cexercise);
 echo($Cattandance);
+echo($Cdate);
 
 
 
 // // Insert Table
-$sql = "INSERT INTO user (Cname, Cpackage, Cclasstype, Ctopics, Cexercise, Cattandance)
-VALUES ('$Cname', '$Cpackage', '$Cclasstype', '$Ctopics', '$Cexercise', '$Cattandance')";
+$sql = "INSERT INTO user (Cdate, Cname, Cpackage, Cclasstype, Ctopics, Cexercise, Cattandance)
+VALUES ('$Cdate', '$Cname', '$Cpackage', '$Cclasstype', '$Ctopics', '$Cexercise', '$Cattandance')";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";

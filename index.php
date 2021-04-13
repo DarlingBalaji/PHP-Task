@@ -92,6 +92,7 @@
 					    <div class="table responsive">
 						    <thead>
 						        <tr>
+						          <th>Date</th>
 						          <th>Name</th>
 						          <th>Package</th>
 						          <th>Topics</th>
@@ -111,13 +112,14 @@
 								// output data of each row
 								while($row = $result->fetch_assoc()) {
 								    echo '<tr>
+								              <td scope="row">' . $row["Cdate"]. '</td>
 								              <td scope="row">' . $row["Cname"]. '</td>
 								              <td>' . $row["Cpackage"] .'</td>
 								              <td> '.$row["Ctopics"] .'</td>
 								              <td> '.$row["Cexercise"] .'</td>
 								              <td> '.$row["Cclasstype"] .'</td>
 								              <td> '.$row["Cattandance"] .'</td>
-								              <td> <button class="View_Btn btn" onclick="window.location.href=viewone.php;">View</button></td>
+								              <td> <button class="View_Btn btn" onclick="window.location.href=viewone.html;">View</button></td>
 								              <td> <button class="Delete_Btn btn">Delete</button></td>
 								            </tr>';
 								}
