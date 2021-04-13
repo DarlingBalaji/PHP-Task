@@ -119,7 +119,7 @@
 								              <td> '.$row["Cexercise"] .'</td>
 								              <td> '.$row["Cclasstype"] .'</td>
 								              <td> '.$row["Cattandance"] .'</td>
-								              <td> <button class="View_Btn btn" onclick="window.location.href=viewone.html;">View</button></td>
+								              <td> <a class="View_Btn btn" onclick="window.location.href=viewone.html;">View</a></td>
 								              <td> <button class="Delete_Btn btn">Delete</button></td>
 								            </tr>';
 								}
