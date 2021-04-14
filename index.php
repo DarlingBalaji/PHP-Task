@@ -121,17 +121,16 @@
 								              <td> '.$row["Cclasstype"] .'</td>
 								              <td> '.$row["Cattandance"] .'</td>
 								              <td> 
-								              		<a href="viewone.php?name=balaji" class="View_Btn btn">View</a>
+								              		<a href="viewone.php?name=' . $row["Cname"].'" class="View_Btn btn">View</a>
 								              </td>
 								              <td> 
-								              	<form action="delete.php" method="POST">
-								              		<button class="Delete_Btn btn">Delete</button>
-								              	</form>
-							              		</td>
+							              		<a href="delete.php?name=' . $row["Cname"].'" class="Delete_Btn btn">Delete</a>
+            				              	  </td>
 								            </tr>';
 								}
 								} else {
-									echo "0 results";
+									echo "<br/>";
+									echo "No records founds";
 								} 
 							?>
 						   </tbody>
