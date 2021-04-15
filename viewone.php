@@ -12,7 +12,7 @@ echo "<b> <center>Database Output</center> </b> <br> <br>";
 
 $result = $conn->query($sql);
 // echo($result);
-// if ($result->num_rows > 0) {
+if ($result->num_rows > 0) {
 
     while ($rows = $result->fetch_assoc() ) {
         $fieldname = $rows['Cdate'];
@@ -32,7 +32,9 @@ $result = $conn->query($sql);
         echo date('d-m-y', strtotime($fieldname));
         echo "<br/><br/>";
     }
-
+} else {
+    echo "No records Founded";
+}
 $conn-> close();
 
 // $id = isset($_GET["name"]) ? $_GET["name"] : false;

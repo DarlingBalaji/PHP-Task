@@ -126,6 +126,10 @@
 								              <td> 
 							              		<a href="delete.php?name=' . $row["Cname"].'" class="Delete_Btn btn">Delete</a>
             				              	  </td>
+
+            				              	  <td> 
+							              		<a href="update.php?name=' . $row["Cname"].'" class="Delete_Btn btn">Update</a>
+            				              	  </td>
 								            </tr>';
 								}
 								} else {
