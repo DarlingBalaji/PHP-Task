@@ -101,6 +101,7 @@
 						           <th>Attandance</th>
 						           <th>Action 1</th>
 						           <th>Action 2</th>
+						           <th>Action 3</th>
 						        </tr>
 						    </thead>
 						    <tbody>

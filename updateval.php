@@ -16,21 +16,28 @@ $old_date = $_POST['Cdate'];
 $Cdate = date('d-m-y', strtotime($old_date));
 
 echo($Cname);
+echo '</br>';
 echo($Cpackage);
+echo '</br>';
 echo($Cclasstype);
+echo '</br>';
 echo($Ctopics);
+echo '</br>';
 echo($Cexercise);
+echo '</br>';
 echo($Cattandance);
+echo '</br>';
 echo($Cdate);
+echo '</br>';
 
 // // Insert Table
-$sql = "UPDATE user SET `Cname` = '$Cname' WHERE `Cname` = '$test'";
+$sql = "UPDATE user SET Cname = '".$Cname."',Cpackage = '".$Cpackage."',Cclasstype = '".$Cclasstype."',Ctopics = '".$Ctopics."',Cattandance = '".$Cattandance."',Cexercise = '".$Cexercise."' WHERE `Cname` = '$test'";
 
 
 if ($conn->query($sql) === TRUE) {
   echo "Record updated successfully";
 } else {
-  echo "Error updating record: " . $conn->error;
+  echo "Error updating record: </br>". $conn->error;
 }
 
 $conn->close();

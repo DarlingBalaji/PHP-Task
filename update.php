@@ -45,14 +45,14 @@
 						    $field4name = $rows['Ctopics'];
 						    $field5name = $rows['Cexercise'];
 						    $field6name = $rows['Cattandance'];
-
+						    $newDate = date('d-m-y', strtotime($fieldname));
 						    echo '<b>'.$field1name.'</b><br />';
 						    echo $field2name. '<br />';
 						    echo $field3name.'<br />';
 						    echo $field4name.'<br />';
 						    echo $field5name.'<br />';
 						    echo $field6name.'<br/>';
-						    echo date('d-m-y', strtotime($fieldname));
+						    echo $newDate;
 						    echo "<br/><br/>";
 						}
 						} else {
@@ -66,11 +66,14 @@
 						$conn-> close();
 						?>
 
-						<form action="updateval.php?name='$field1name'" method="POST">
+
+						<?php echo $test; ?>
+
+						<form action="updateval.php?name=<?php echo $test?>" method="POST">
 							<!-- Date -->
 							<div class="Form_Fields">
 								<label>Date</label>
-								<input type="Date" name="Cdate" id="Cdate" value="<?php echo $fieldname?>">
+								<input type="date" name="Cdate" id="Cdate" value="<?php echo $newDate;?>">
 							</div>
 							<!-- Date -->
 
